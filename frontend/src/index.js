@@ -12,3 +12,7 @@ function login() {
 function register() {
     window.location = "pages/register.html"
 }
+
+function openProfile() {
+    window.location = "pages/profile.html"
+}

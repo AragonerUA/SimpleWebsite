@@ -21,8 +21,13 @@
 @import url(font-awesome.min.css);
 @import url(responsive.css);
 @import url(bootstrap.css);
+@import url(profile.css);
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+
+.mi{
+     z-index: 1000000;
+}
 
 * {
      box-sizing: border-box !important;
