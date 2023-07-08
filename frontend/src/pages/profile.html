@@ -10,7 +10,7 @@
 <body>
     <section class="profile">
         <div class="profile__logo logo">
-            <a><img src="../images/logo.png" alt="#"/></a>
+            <a style="cursor: pointer;" onclick="openMain()"><img src="../images/logo.png" alt="#"/></a>
         </div>
         <div class="profile__grid">
             <div class="profile__block profile__information information">
@@ -33,10 +33,11 @@
                 <h1 class="orders__header">History of orders</h1>
                 <b class="orders__title">Here are your orders</b>
                 <p class="orders__subtitle">Checkout in the shopping cart and come back to see where the items are now</p>
-                <button class="orders__link">Go to basket</button>
+                <button class="orders__link" onclick="openBasketFromProfile()">Go to basket</button>
             </div>
         </div>
         <div class="back"></div>
     </section>
+    <script src="../index.js"></script>
 </body>
 </html>

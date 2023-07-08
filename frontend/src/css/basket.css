@@ -1,0 +1,12 @@
+.basket{
+    height: 100vh;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column
+}
+
+.basket__title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+}

@@ -16,7 +16,7 @@
     margin-bottom: 15px;
 }
 
-.profile__block{
+.profile__block, .block{
     background-color: white;
     padding: 20px;
     border-radius: 20px;

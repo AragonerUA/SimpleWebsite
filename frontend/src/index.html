@@ -34,14 +34,21 @@
          <div class="menu_sitbar">
             <ul class="menu">
                <li>
-                  <button type="button">
-                     <img  onclick="openNav()" src="./images/menu_icon.png" alt="#"/>
-                  </button>
+                  <a style="cursor: pointer">
+                     <img onclick="openNav()" src="./images/menu_icon.png" alt="#"/>
+                  </a>
                </li>
                <li>
-                  <button type="button">
-                     <img style="height: 100%; margin-top: 10px;" onclick="openProfile()" src="./images/free-icon-user-profile-2651994.png" alt="#"/>
-                  </button>
+                  <a style="cursor: pointer" onclick="openProfile()">
+                     <img style="height: 100%; margin-top: 10px;"  src="./images/free-icon-user-profile-2651994.png" alt="#"/>
+                  </a>
+               </li>
+               <li>
+                  <a onclick="openBasket()" style="cursor: pointer; width: 37px; height: 100%">
+                     <svg style="margin-top: 10px" xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+                        <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+                     </svg>
+                  </a>
                </li>
             </ul>
             <ul class="social_icon">
@@ -95,7 +102,7 @@
             </div>
             <div class="row">
                <div class="col-md-3 col-sm-6">
-                  <div class="protien">
+                  <div class="protien" data-img="./images/pro1.png">
                      <figure><img src="./images/pro1.png" alt="#"/></figure>
                      <h3>$400</h3>
                      <span> Variations  </span>
@@ -103,7 +110,7 @@
                   </div>
                </div>
                <div class="col-md-3 col-sm-6">
-                  <div class="protien">
+                  <div class="protien" data-img="./images/pro2.png">
                      <figure><img src="./images/pro2.png" alt="#"/></figure>
                      <h3>$400</h3>
                      <span>  Passages  </span>
@@ -111,7 +118,7 @@
                   </div>
                </div>
                <div class="col-md-3 col-sm-6">
-                  <div class="protien">
+                  <div class="protien" data-img="./images/pro3.png">
                      <figure><img src="./images/pro3.png" alt="#"/></figure>
                      <h3>$400</h3>
                      <span> Variations </span>
@@ -119,7 +126,7 @@
                   </div>
                </div>
                <div class="col-md-3 col-sm-6">
-                  <div class="protien">
+                  <div class="protien" data-img="./images/pro4.png">
                      <figure><img src="./images/pro4.png" alt="#"/></figure>
                      <h3>$400</h3>
                      <span> Pedicure </span>
@@ -363,6 +370,23 @@
             </div>
          </div>
       </footer>
+      <section class="popup">
+         <div class="popup__block">
+            <button type="button" class="popup__close"></button>
+            <div class="popup__content">
+               <img class="popup__image" alt="#"/>
+               <div class="popup__description">
+                  <h3>Pice: $400</h3>
+                  <h2>Name: Passages  </h2>
+                  <h3 class="description">Description: <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum</h3>
+               </div>
+            </div>
+<!--            <div>-->
+               <a class="read_more popup__button" href="Javascript:void(0)"> Buy Now</a>
+               <a class="read_more popup__button" href="Javascript:void(0)"> Add to Basket</a>
+<!--            </div>-->
+         </div>
+      </section>
       <script src="./index.js"></script>
    </body>
 </html>
