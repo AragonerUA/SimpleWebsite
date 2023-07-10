@@ -5,6 +5,7 @@
         <!-- mobile metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- site metas -->
         <title>Login</title>
         <!-- bootstrap css -->
@@ -17,22 +18,22 @@
     <body class="authorization-layout" style="margin-top: 200px">
         <h1 class="heading" style="text-align: center; margin: 0 0 10px 0; padding: 0;">Login</h1>
         <form style="width: 500px;
-                     margin: 0 auto;">
+                     margin: 0 auto;" action="/SimpleWebsite/backend/test2.php" method="post">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp" name="exampleInputEmail1" required>
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-input" id="exampleInputPassword1">
+                <input type="password" class="form-input" id="exampleInputPassword1" name="exampleInputPassword1" required>
             </div>
             <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="exampleCheck1" required>
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center;">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" name="sbm_btn" id="sbm_btn">Submit</button>
                 <p style="color: #666666;
                         font-size: 14px;
                         font-family: 'Poppins', sans-serif;
@@ -48,6 +49,9 @@
         <script>
             function register() {
                 window.location = "register.html";
+            }
+            function tested() {
+                alert("YOU CLICKED THE BUTTON!!!")
             }
         </script>
     </body>

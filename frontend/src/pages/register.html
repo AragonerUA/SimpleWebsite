@@ -17,21 +17,21 @@
     <body class="authorization-layout" style="margin-top: 200px">
         <h1 class="heading" style="text-align: center; margin: 0 0 10px 0; padding: 0;">Register</h1>
         <form style="width: 500px;
-                             margin: 0 auto;">
+                             margin: 0 auto;" action="/SimpleWebsite/backend/test.php" method="post">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="email" class="form-input" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-input" id="exampleInputPassword1">
+                <input type="password" class="form-input" id="exampleInputPassword1" name="exampleInputPassword1">
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id="sbm_btn" name="sbm_btn">Submit</button>
         </form>
     </body>
 </html>
