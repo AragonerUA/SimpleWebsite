@@ -9,12 +9,44 @@
 </head>
 <body>
     <section class="basket">
-        <div class="profile__logo logo">
+        <div class="profile__logo logo" style="display: flex; justify-content: space-between; align-items: center;">
             <a style="cursor: pointer;" onclick="openMain()"><img src="../images/logo.png" alt="#"/></a>
+            <a style="cursor: pointer" onclick="openProfileFromBasket()">
+                <img style="height: 37px; margin-top: 10px;"  src="../images/free-icon-user-profile-2651994.png" alt="#"/>
+            </a>
         </div>
         <h1 class="basket__title">Basket</h1>
         <div class="basket__grid">
             <div class="basket__block block basket__products products">
+                <ul class="basket__products" data-img="./images/pro1.png">
+                    <li class="basket__product">
+                        <p class="order__number">1</p>
+                        <div>
+                            <figure><img src="../images/pro1.png" style="width: 100px" alt="#"/></figure>
+                        </div>
+                        <div>
+                            <h3>$400</h3>
+                            <span> Variations</span>
+                            <a class="read_more mar_top" style="background-color: rgba(255,0,0,0.66)" href="Javascript:void(0)">Delete</a>
+                        </div>
+                    </li>
+                    <li class="basket__product">
+                        <p class="order__number">2</p>
+                        <div>
+                            <figure><img src="../images/pro1.png" style="width: 100px" alt="#"/></figure>
+                        </div>
+                        <div>
+                            <h3>$400</h3>
+                            <span> Variations</span>
+                            <a class="read_more mar_top" style="background-color: rgba(255,0,0,0.66)" href="Javascript:void(0)">Delete</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="ordering">
+                    <a class="ordering__button"  onclick="openCheckout()" href="Javascript:void(0)">Proceed to checkout</a>
+                    <p class="ordering__text">Available options and delivery time can be selected at checkout</p>
+                    <h3 class="ordering__total">Total: 3000$</h3>
+                </div>
             </div>
         </div>
     </section>

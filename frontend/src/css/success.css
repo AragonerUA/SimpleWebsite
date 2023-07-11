@@ -1,0 +1,13 @@
+.success{
+    height: 100vh;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.success__block{
+    height: 50%;
+    text-align: center;
+    width: 400px;
+    margin: 150px auto 0;
+}

@@ -58,7 +58,7 @@ function openMain() {
 }
 
 function openProfile() {
-    window.location = "pages/profile.html"
+    window.location = "pages/UserProfile.html"
 }
 
 function openBasket() {
@@ -67,6 +67,14 @@ function openBasket() {
 
 function openBasketFromProfile() {
     window.location = "basket.html"
+}
+
+function openProfileFromBasket() {
+    window.location = "UserProfile.html"
+}
+
+function openCheckout() {
+    window.location = "Checkout.html"
 }
 
 
