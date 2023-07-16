@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,11 @@
                 <div class="information__block">
                     <img src="../images/costu.png" alt="" class="information__avatar">
                     <p class="information__name">Komolkin Aleks</p>
-                    <p class="information__email">san4es.kom@gmail.com</p>
+                    <?php
+                    session_start();
+                    echo $_SESSION["required_email"];
+                    ?>
+                    <p class="information__email">Hi there! Here is your profile!</p>
                 </div>
             </div>
             <div class="profile__block profile__payment payment">
@@ -34,6 +38,9 @@
                 <b class="orders__title">Here are your orders</b>
                 <p class="orders__subtitle">Checkout in the shopping cart and come back to see where the items are now</p>
                 <button class="orders__link" onclick="openBasketFromProfile()">Go to basket</button>
+                <?php if ($_SESSION["is_admin"]): ?>
+                    <button class="orders__link" onclick="openBasketFromProfile()">Add product</button>
+                <?php endif;?>
             </div>
         </div>
         <div class="back"></div>

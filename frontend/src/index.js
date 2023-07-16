@@ -54,23 +54,23 @@ function login() {
 }
 
 function openMain() {
-    window.location = "../index.html"
+    window.location = "../index.php"
 }
 
 function openProfile() {
-    window.location = "pages/UserProfile.html"
+    window.location = "pages/UserProfile.php"
 }
 
 function openBasket() {
-    window.location = "pages/basket.html"
+    window.location = "pages/basket.php"
 }
 
 function openBasketFromProfile() {
-    window.location = "basket.html"
+    window.location = "basket.php"
 }
 
 function openProfileFromBasket() {
-    window.location = "UserProfile.html"
+    window.location = "UserProfile.php"
 }
 
 function openCheckout() {

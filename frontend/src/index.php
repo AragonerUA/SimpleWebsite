@@ -121,7 +121,7 @@
                   <div class="protien" data-img="./images/pro3.png">
                      <figure><img src="./images/pro3.png" alt="#"/></figure>
                      <h3>$400</h3>
-                     <span> Variations </span>
+                     <span> Protein </span>
                      <a class="read_more mar_top" href="Javascript:void(0)"> Buy Now</a>
                   </div>
                </div>
@@ -383,7 +383,12 @@
             </div>
 <!--            <div>-->
                <a class="read_more popup__button" onclick="openBasket()" href="Javascript:void(0)"> Buy Now</a>
-               <a class="read_more popup__button" href="Javascript:void(0)"> Add to Basket</a>
+               <a class="read_more popup__button" id="add_to_basket" onclick="redirr()" href="Javascript:void(0)"> Add to Basket</a>
+             <script>
+                 function redirr() {
+                     window.location = "/SimpleWebsite/backend/basket_addition.php"
+                 }
+             </script>
 <!--            </div>-->
          </div>
       </section>
