@@ -41,7 +41,6 @@ class Popup {
 
 const popup = new Popup('.popup');
 
-
 function openNav() {
     document.getElementById("myNav").style.width = "100%";
 }
@@ -51,6 +50,18 @@ function closeNav() {
 }
 function login() {
     window.location = "pages/login.html"
+}
+
+function toCategoryPage() {
+    window.location = "pages/CategoryPage.php"
+}
+
+function toAboutPage(){
+    window.location = "pages/AboutPage.php"
+}
+
+function toTestimonialPage() {
+    window.location = "pages/TestimonialPage.php"
 }
 
 function openMain() {
@@ -83,6 +94,68 @@ function openPopup (event) {
     const imageUrl = button.dataset.img;
     popup.open(imageUrl);
 }
+
+function printProducts(){
+    const products = document.querySelectorAll('.col-md-3')
+}
+
+function increaseSort() {
+    const products = document.querySelectorAll('.col-md-3');
+
+    const productsArray = Array.from(products);
+
+    productsArray.sort((a, b) => {
+        const priceA = parseInt(a.querySelector('h3').innerText.slice(1));
+        const priceB = parseInt(b.querySelector('h3').innerText.slice(1));
+        return priceA - priceB;
+    });
+
+    const container = document.querySelector('.row');
+    container.innerHTML = '';
+
+    productsArray.forEach(product => {
+        container.appendChild(product);
+    });
+}
+
+function decreaseSort() {
+    const products = document.querySelectorAll('.col-md-3');
+
+    const productsArray = Array.from(products);
+
+    productsArray.sort((a, b) => {
+        const priceA = parseInt(a.querySelector('h3').innerText.slice(1));
+        const priceB = parseInt(b.querySelector('h3').innerText.slice(1));
+        return priceB - priceA;
+    });
+
+    const container = document.querySelector('.row');
+    container.innerHTML = '';
+
+    productsArray.forEach(product => {
+        container.appendChild(product);
+    });
+}
+
+function loadColumns() {
+    // Получаем блок "row" из первого файла (index.html)
+    const indexRow = document.querySelector('.row');
+
+    // Получаем блок "row" из текущего файла (CategoryPage.html)
+    const categoryRow = document.querySelector('.row');
+
+    // Проверяем, что блок из первого файла существует
+    if (indexRow) {
+        // Клонируем содержимое блока "row" из первого файла
+        const clonedRow = indexRow.cloneNode(true);
+
+        // Добавляем клонированный блок в текущий файл
+        categoryRow.appendChild(clonedRow);
+    }
+}
+
+// Вызываем функцию для загрузки колонок при загрузке страницы
+loadColumns();
 
 openPopupButton.forEach((button) => {
     button.addEventListener('click', openPopup)

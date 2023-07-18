@@ -38,14 +38,26 @@
 }
 
 .popup__button{
-    display: inline-block;
-    margin: 0 auto;
-    max-width: 142px;
-    height: 40px;
-    padding: 4px 0;
-    margin-top: 15px;
+    font-size: 17px;
+    background-color: #3e3f40;
+    color: #fff;
+    padding: 9px 0px;
+    width: 100%;
+    max-width: 194px;
+    text-align: center;
+    transition: ease-in all 0.5s;
+    font-weight: 500;
+    height: 46px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 3px;
+    margin: 15px auto 0;
 }
 
+.popup__button:focus{
+    background-color: #0c5460;
+}
 
 .popup__close{
     background-image: url(../images/Close.svg);
