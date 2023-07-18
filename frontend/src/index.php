@@ -370,7 +370,7 @@
             </div>
          </div>
       </footer>
-      <section class="popup">
+      <section class="popup" onclick="dataFetch()">
          <div class="popup__block">
             <button type="button" class="popup__close"></button>
             <div class="popup__content">
@@ -387,6 +387,12 @@
              <script>
                  function redirr() {
                      window.location = "/SimpleWebsite/backend/basket_addition.php"
+                 }
+             </script>
+             <script>
+                 #TODO
+                 function dataFetch() {
+                     window.location = "/SimpleWebsite/backend/product_page.php"
                  }
              </script>
 <!--            </div>-->

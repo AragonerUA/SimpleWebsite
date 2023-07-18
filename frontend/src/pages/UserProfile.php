@@ -16,10 +16,9 @@
             <div class="profile__block profile__information information">
                 <div class="information__block">
                     <img src="../images/costu.png" alt="" class="information__avatar">
-                    <p class="information__name">Komolkin Aleks</p>
                     <?php
                     session_start();
-                    echo $_SESSION["required_email"];
+                    echo 'Email: ', $_SESSION["required_email"];
                     ?>
                     <p class="information__email">Hi there! Here is your profile!</p>
                 </div>
@@ -39,7 +38,13 @@
                 <p class="orders__subtitle">Checkout in the shopping cart and come back to see where the items are now</p>
                 <button class="orders__link" onclick="openBasketFromProfile()">Go to basket</button>
                 <?php if ($_SESSION["is_admin"]): ?>
-                    <button class="orders__link" onclick="openBasketFromProfile()">Add product</button>
+                    <button class="orders__link" onclick="addProduct()">Add product</button>
+                    <script>
+                        function addProduct() {
+                            window.location = "/SimpleWebsite/frontend/src/pages/prod_add.html";
+                            // window.location = "/SimpleWebsite/backend/product_addition.php";
+                        }
+                    </script>
                 <?php endif;?>
             </div>
         </div>
