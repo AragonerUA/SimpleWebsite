@@ -6,12 +6,20 @@ class Popup {
         this._popup = document.querySelector(popupSelector);
         this._handleEscClose = this._handleEscClose.bind(this);
         this._image = this._popup.querySelector('.popup__image')
+        this.__description = this._popup.querySelector('#popup_description')
+        this.__price = this._popup.querySelector('#popup_price')
+        this.__name = this._popup.querySelector('#popup_name')
+
         this.setEventListeners()
     }
 
-    open(image) {
+    open(image, description, price, name, product_id) {
         this._popup.classList.add('popup_opened');
         this._image.src = image;
+        this.__description.innerHTML = description;
+        this.__price.innerHTML = "Price: " + price;
+        this.__name.innerHTML = "Name: " + name;
+        window.current_product = product_id;
         document.addEventListener('keydown', this._handleEscClose);
     }
 
@@ -78,12 +86,13 @@ function openCheckout() {
 }
 
 
-function openPopup (event) {
-    const button = event.currentTarget;
-    const imageUrl = button.dataset.img;
-    popup.open(imageUrl);
-}
+// function openPopup (event) {
+//     const button = event.currentTarget;
+//     const imageUrl = button.dataset.img;
+//     window.current_product = button.dataset.product_id;
+//     popup.open(imageUrl);
+// }
 
-openPopupButton.forEach((button) => {
-    button.addEventListener('click', openPopup)
-})
+// openPopupButton.forEach((button) => {
+//     button.addEventListener('click', openPopup)
+// })

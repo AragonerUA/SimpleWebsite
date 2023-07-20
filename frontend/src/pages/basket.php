@@ -23,7 +23,7 @@
                     require "../../../backend/open_connection.php";
                     session_start();
                     $id = $_SESSION["ID"];
-                    $sql = "SELECT `basket`.`id_user`, `products`.`name`, `products`.`price`, `products`.`image` FROM `products`\n"
+                    $sql = "SELECT `basket`.`id_w`, `basket`.`id_user`, `products`.`name`, `products`.`price`, `products`.`image` FROM `products`\n"
 
                         . "JOIN `basket` \n"
 
@@ -34,8 +34,8 @@
                     $items = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     ?>
                     <?php foreach ($items as $item) { ?>
-
-                        <li class="basket__product">
+                        <?php $id_w = $item["id_w"] ?>
+                        <li class='basket__product'>
                             <p class="order__number">1</p>
                             <div>
                                 <?php
@@ -50,7 +50,9 @@
                                     echo "<h3>$$price</h3>";
                                     echo "<span>$name</span>";
                                 ?>
-                                <a class="read_more mar_top" style="background-color: rgba(255,0,0,0.66)" href="Javascript:void(0)">Delete</a>
+                                <?php
+echo "<a class=\"read_more mar_top\" style=\"background-color: rgba(255,0,0,0.66)\" onclick=\"deleteProd($id_w)\" href=\"Javascript:void(0)\">Delete</a>";
+                                ?>
                             </div>
                         </li>
                     <?php }  ?>
@@ -60,6 +62,11 @@
                     <script>
                         function redir() {
                             window.location = "/SimpleWebsite/backend/checkout.php";
+                        }
+                    </script>
+                    <script>
+                        function deleteProd(id_write) {
+                            window.location = "/SimpleWebsite/backend/delete_from_basket.php?id_write=" + id_write
                         }
                     </script>
                     <p class="ordering__text">Available options and delivery time can be selected at checkout</p>

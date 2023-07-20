@@ -101,38 +101,63 @@
                </div>
             </div>
             <div class="row">
-               <div class="col-md-3 col-sm-6">
-                  <div class="protien" data-img="./images/pro1.png">
-                     <figure><img src="./images/pro1.png" alt="#"/></figure>
-                     <h3>$400</h3>
-                     <span> Variations  </span>
-                     <a class="read_more mar_top" href="Javascript:void(0)"> Buy Now</a>
-                  </div>
-               </div>
-               <div class="col-md-3 col-sm-6">
-                  <div class="protien" data-img="./images/pro2.png">
-                     <figure><img src="./images/pro2.png" alt="#"/></figure>
-                     <h3>$400</h3>
-                     <span>  Passages  </span>
-                     <a class="read_more mar_top" href="Javascript:void(0)"> Buy Now</a>
-                  </div>
-               </div>
-               <div class="col-md-3 col-sm-6">
-                  <div class="protien" data-img="./images/pro3.png">
-                     <figure><img src="./images/pro3.png" alt="#"/></figure>
-                     <h3>$400</h3>
-                     <span> Protein </span>
-                     <a class="read_more mar_top" href="Javascript:void(0)"> Buy Now</a>
-                  </div>
-               </div>
-               <div class="col-md-3 col-sm-6">
-                  <div class="protien" data-img="./images/pro4.png">
-                     <figure><img src="./images/pro4.png" alt="#"/></figure>
-                     <h3>$400</h3>
-                     <span> Pedicure </span>
-                     <a class="read_more mar_top" href="Javascript:void(0)"> Buy Now</a>
-                  </div>
-               </div>
+                <?php
+                require "../../backend/open_connection.php";
+                $new_sql = "SELECT * FROM `products`";
+                $result = mysqli_query($con, $new_sql);
+//                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                $items = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                foreach ($items as $row) {
+                    $prod_row_id = $row["id"];
+                    $prod_row_image = $row["image"];
+                    $prod_row_price = $row["price"];
+                    $prod_row_name = $row["name"];
+                    $prod_row_desc = $row["description"]; ?>
+                <div class="col-md-3 col-sm-6">
+                    <?php
+                    $call = "popup.open('$prod_row_image', '$prod_row_desc', $prod_row_price, '$prod_row_name', $prod_row_id)";
+                    echo "<div class=\"protien\" data-img=\"$prod_row_image\" data-product_id=\"$prod_row_id\">";
+                        echo "<figure><img src=\"$prod_row_image\" alt=\"#\"/></figure>";
+                        echo "<h3>$$prod_row_price</h3>";
+                        echo "<span>$prod_row_name</span>";
+                        echo "<a class='read_more mar_top' onclick=\"$call\" href='Javascript:void(0)'> Buy Now</a>";
+                    echo "</div>";
+                    ?>
+
+                </div>
+                <?php } ?>
+<!--               <div class="col-md-3 col-sm-6">-->
+<!--                  <div class="protien" data-img="./images/pro1.png">-->
+<!--                     <figure><img src="./images/pro1.png" alt="#"/></figure>-->
+<!--                     <h3>$400</h3>-->
+<!--                     <span> Variations  </span>-->
+<!--                     <a class="read_more mar_top" href="Javascript:void(0)"> Buy Now</a>-->
+<!--                  </div>-->
+<!--               </div>-->
+<!--               <div class="col-md-3 col-sm-6">-->
+<!--                  <div class="protien" data-img="./images/pro2.png">-->
+<!--                     <figure><img src="./images/pro2.png" alt="#"/></figure>-->
+<!--                     <h3>$400</h3>-->
+<!--                     <span>  Passages  </span>-->
+<!--                     <a class="read_more mar_top" href="Javascript:void(0)"> Buy Now</a>-->
+<!--                  </div>-->
+<!--               </div>-->
+<!--               <div class="col-md-3 col-sm-6">-->
+<!--                  <div class="protien" data-img="./images/pro3.png">-->
+<!--                     <figure><img src="./images/pro3.png" alt="#"/></figure>-->
+<!--                     <h3>$400</h3>-->
+<!--                     <span> Protein </span>-->
+<!--                     <a class="read_more mar_top" href="Javascript:void(0)"> Buy Now</a>-->
+<!--                  </div>-->
+<!--               </div>-->
+<!--               <div class="col-md-3 col-sm-6">-->
+<!--                  <div class="protien" data-img="./images/pro4.png">-->
+<!--                     <figure><img src="./images/pro4.png" alt="#"/></figure>-->
+<!--                     <h3>$400</h3>-->
+<!--                     <span> Pedicure </span>-->
+<!--                     <a class="read_more mar_top" href="Javascript:void(0)"> Buy Now</a>-->
+<!--                  </div>-->
+<!--               </div>-->
             </div>
          </div>
       </div>
@@ -374,25 +399,46 @@
          <div class="popup__block">
             <button type="button" class="popup__close"></button>
             <div class="popup__content">
+<!--                --><?php
+//                require "../../backend/open_connection.php";
+//                $new_sql = "SELECT * FROM `products`";
+//                $result = mysqli_query($con, $new_sql);
+//                $items = mysqli_fetch_all($result, MYSQLI_ASSOC);
+//                foreach ($items as $row) {
+//                    $prod_row_id = $row["id"];
+//                    $prod_row_image = $row["image"];
+//                    $prod_row_price = $row["price"];
+//                    $prod_row_name = $row["name"];
+//                    $prod_row_desc = $row["description"]; ?>
+<!--                <img class="popup__image" alt="#"/>-->
+<!--                <div class="popup__description">-->
+<!--                    --><?php
+//                    echo "<h3>Price: $$prod_row_price</h3>";
+//                    echo "<h2>Name: $prod_row_name</h2>";
+//                    echo "<h3 class='description'>Description: <br>$prod_row_desc</h3>";
+//                    ?>
+<!--                </div>-->
+<!--                --><?php //} ?>
                <img class="popup__image" alt="#"/>
                <div class="popup__description">
-                  <h3>Pice: $400</h3>
-                  <h2>Name: Passages  </h2>
-                  <h3 class="description">Description: <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum</h3>
+                  <h3 id="popup_price">Pice: $400</h3>
+                  <h2 id="popup_name">Name: Passages  </h2>
+                  <h3 id="popup_description" class="description">Description: <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum</h3>
                </div>
             </div>
-<!--            <div>-->
-               <a class="read_more popup__button" onclick="openBasket()" href="Javascript:void(0)"> Buy Now</a>
+            <div>
                <a class="read_more popup__button" id="add_to_basket" onclick="redirr()" href="Javascript:void(0)"> Add to Basket</a>
              <script>
                  function redirr() {
-                     window.location = "/SimpleWebsite/backend/basket_addition.php"
+                     window.location = "/SimpleWebsite/backend/basket_addition.php?product_id=" + window.current_product
+                     // fetch("/SimpleWebsite/backend/basket_addition.php?product_id=" + window.current_product, {
+                     //     method: "POST",
+                     // })
                  }
              </script>
              <script>
-                 #TODO
                  function dataFetch() {
-                     window.location = "/SimpleWebsite/backend/product_page.php"
+                     //window.location = "/SimpleWebsite/backend/product_page.php"
                  }
              </script>
 <!--            </div>-->
