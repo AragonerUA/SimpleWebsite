@@ -63,7 +63,7 @@
                   <div class="row">
                      <div class="col-md-12">
                         <div class="logo">
-                           <a href="index.html"><img src="./images/logo.png" alt="#"/></a>
+                           <a href="index.php"><img src="./images/logo.png" alt="#"/></a>
                         </div>
                      </div>
                   </div>
@@ -105,7 +105,6 @@
                 require "../../backend/open_connection.php";
                 $new_sql = "SELECT * FROM `products`";
                 $result = mysqli_query($con, $new_sql);
-//                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 $items = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 foreach ($items as $row) {
                     $prod_row_id = $row["id"];
@@ -123,41 +122,8 @@
                         echo "<a class='read_more mar_top' onclick=\"$call\" href='Javascript:void(0)'> Buy Now</a>";
                     echo "</div>";
                     ?>
-
                 </div>
                 <?php } ?>
-<!--               <div class="col-md-3 col-sm-6">-->
-<!--                  <div class="protien" data-img="./images/pro1.png">-->
-<!--                     <figure><img src="./images/pro1.png" alt="#"/></figure>-->
-<!--                     <h3>$400</h3>-->
-<!--                     <span> Variations  </span>-->
-<!--                     <a class="read_more mar_top" href="Javascript:void(0)"> Buy Now</a>-->
-<!--                  </div>-->
-<!--               </div>-->
-<!--               <div class="col-md-3 col-sm-6">-->
-<!--                  <div class="protien" data-img="./images/pro2.png">-->
-<!--                     <figure><img src="./images/pro2.png" alt="#"/></figure>-->
-<!--                     <h3>$400</h3>-->
-<!--                     <span>  Passages  </span>-->
-<!--                     <a class="read_more mar_top" href="Javascript:void(0)"> Buy Now</a>-->
-<!--                  </div>-->
-<!--               </div>-->
-<!--               <div class="col-md-3 col-sm-6">-->
-<!--                  <div class="protien" data-img="./images/pro3.png">-->
-<!--                     <figure><img src="./images/pro3.png" alt="#"/></figure>-->
-<!--                     <h3>$400</h3>-->
-<!--                     <span> Protein </span>-->
-<!--                     <a class="read_more mar_top" href="Javascript:void(0)"> Buy Now</a>-->
-<!--                  </div>-->
-<!--               </div>-->
-<!--               <div class="col-md-3 col-sm-6">-->
-<!--                  <div class="protien" data-img="./images/pro4.png">-->
-<!--                     <figure><img src="./images/pro4.png" alt="#"/></figure>-->
-<!--                     <h3>$400</h3>-->
-<!--                     <span> Pedicure </span>-->
-<!--                     <a class="read_more mar_top" href="Javascript:void(0)"> Buy Now</a>-->
-<!--                  </div>-->
-<!--               </div>-->
             </div>
          </div>
       </div>
@@ -395,30 +361,10 @@
             </div>
          </div>
       </footer>
-      <section class="popup" onclick="dataFetch()">
+      <section class="popup">
          <div class="popup__block">
             <button type="button" class="popup__close"></button>
             <div class="popup__content">
-<!--                --><?php
-//                require "../../backend/open_connection.php";
-//                $new_sql = "SELECT * FROM `products`";
-//                $result = mysqli_query($con, $new_sql);
-//                $items = mysqli_fetch_all($result, MYSQLI_ASSOC);
-//                foreach ($items as $row) {
-//                    $prod_row_id = $row["id"];
-//                    $prod_row_image = $row["image"];
-//                    $prod_row_price = $row["price"];
-//                    $prod_row_name = $row["name"];
-//                    $prod_row_desc = $row["description"]; ?>
-<!--                <img class="popup__image" alt="#"/>-->
-<!--                <div class="popup__description">-->
-<!--                    --><?php
-//                    echo "<h3>Price: $$prod_row_price</h3>";
-//                    echo "<h2>Name: $prod_row_name</h2>";
-//                    echo "<h3 class='description'>Description: <br>$prod_row_desc</h3>";
-//                    ?>
-<!--                </div>-->
-<!--                --><?php //} ?>
                <img class="popup__image" alt="#"/>
                <div class="popup__description">
                   <h3 id="popup_price">Pice: $400</h3>
@@ -431,17 +377,8 @@
              <script>
                  function redirr() {
                      window.location = "/SimpleWebsite/backend/basket_addition.php?product_id=" + window.current_product
-                     // fetch("/SimpleWebsite/backend/basket_addition.php?product_id=" + window.current_product, {
-                     //     method: "POST",
-                     // })
                  }
              </script>
-             <script>
-                 function dataFetch() {
-                     //window.location = "/SimpleWebsite/backend/product_page.php"
-                 }
-             </script>
-<!--            </div>-->
          </div>
       </section>
       <script src="./index.js"></script>
