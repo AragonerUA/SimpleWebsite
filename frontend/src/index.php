@@ -21,6 +21,7 @@
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
          <div class="menu_sid-content">
             <a href="#login" onclick="login()">Login</a>
+             <a href="#login" onclick="openCategoryPage()">Category Page</a>
             <a href="#protien">Our Protien</a>
             <a href="#about">About Us</a>
             <a href="#testimonial">Testimonial</a>
@@ -75,7 +76,7 @@
                      <div class="col-md-5">
                         <div class="banner_text">
                            <h1>Pro<br> Body Builder Protien</h1>
-                           <a class="get_btn" href="#about" role="button">About Protien</a> <a class="get_btn" href="#contact" role="button">Contact Us</a>
+                           <a class="get_btn" href="#about" role="button">About Protien</a>
                         </div>
                      </div>
                      <div class="col-md-7">
@@ -136,7 +137,6 @@
                   <div class="titlepage">
                      <h2>About Us</h2>
                      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or</p>
-                     <a class="read_more" href="Javascript:void(0)">Read More</a>
                   </div>
                </div>
                <div class="col-md-6 pad_right0">
@@ -160,7 +160,6 @@
                <div class="col-md-6">
                   <div class="titlepage">
                      <h2>Growyhing Your Body From Protien</h2>
-                     <a class="read_more" href="Javascript:void(0)"> Read More</a>
                   </div>
                </div>
             </div>
@@ -205,40 +204,6 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="carousel-item">
-                              <div class="container">
-                                 <div class="carousel-caption relative2">
-                                    <div class="row d_flex">
-                                       <div class="col-md-11">
-                                          <i><img src="./images/costu.png" alt="#"/></i>
-                                          <span>Consectetur</span>
-                                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="carousel-item">
-                              <div class="container">
-                                 <div class="carousel-caption relative2">
-                                    <div class="row d_flex">
-                                       <div class="col-md-11">
-                                          <i><img src="./images/costu.png" alt="#"/></i>
-                                          <span>Consectetur</span>
-                                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <a class="carousel-control-prev" href="#testimo" role="button" data-slide="prev">
-                           <i class="fa fa-angle-left" aria-hidden="true"></i>
-                           <span class="sr-only">Previous</span>
-                           </a>
-                           <a class="carousel-control-next" href="#testimo" role="button" data-slide="next">
-                           <i class="fa fa-angle-right" aria-hidden="true"></i>
-                           <span class="sr-only">Next</span>
-                           </a>
                         </div>
                      </div>
                   </div>
@@ -247,42 +212,6 @@
          </div>
       </div>
       <!-- end testimonial -->
-      <!--  contact -->
-      <div id="contact" class="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>Request a call back</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-6 offset-md-3">
-                  <form id="request" class="main_form">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Full Name" type="type" name="Full Name">
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Email " type="type" name="Email ">
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">
-                        </div>
-                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message</textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn">Send</button>
-                        </div>
-                     </div>
-                  </form>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end contact -->
       <!--  footer -->
       <footer>
          <div class="footer">
@@ -340,22 +269,13 @@
                         <li>have suffered  </li>
                      </ul>
                   </div>
-                  <div class="col-sm-12">
+                  <div class="col-sm-12" style="padding-bottom: 30px">
                      <ul class="social2_icon">
                         <li><a href="javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                         <li><a href="javascript:void(0)"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
                         <li><a href="javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                      </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-10 offset-md-1">
-                        <p>© 2023 All Rights Reserved.<a href="https://html.design/"> Free html Templates</a></p>
-                     </div>
                   </div>
                </div>
             </div>
@@ -367,7 +287,7 @@
             <div class="popup__content">
                <img class="popup__image" alt="#"/>
                <div class="popup__description">
-                  <h3 id="popup_price">Pice: $400</h3>
+                  <h3 id="popup_price">Price: $400</h3>
                   <h2 id="popup_name">Name: Passages  </h2>
                   <h3 id="popup_description" class="description">Description: <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum</h3>
                </div>

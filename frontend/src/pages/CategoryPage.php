@@ -16,8 +16,8 @@
                     <h2>Filters</h2>
                     <p class="price" style="text-align: start; padding-left: 40px; margin-top: 20px;">Price:</p>
                     <div style="display: flex; justify-content: flex-start; align-items: center; padding-left: 40px; margin-top: 10px; gap: 10px">
-                        <a class="popup__button" style="margin: 0;" id="add_to_basket" onclick="increaseSort()" href="Javascript:void(0)"> Increase</a>
-                        <a class="popup__button" style="margin: 0;" id="add_to_basket" onclick="decreaseSort()" href="Javascript:void(0)"> Decrease</a>
+                        <a class="get_btn" style="margin: 0;" id="add_to_basket" onclick="increaseSort()" href="Javascript:void(0)"> Increase</a>
+                        <a class="get_btn" style="margin: 0;" id="add_to_basket" onclick="decreaseSort()" href="Javascript:void(0)"> Decrease</a>
                     </div>
                 </div>
             </div>

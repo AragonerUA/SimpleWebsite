@@ -85,17 +85,10 @@ function openCheckout() {
     window.location = "Checkout.html"
 }
 
+function openCategoryPage() {
+    window.location = "pages/CategoryPage.php"
+}
 
-// function openPopup (event) {
-//     const button = event.currentTarget;
-//     const imageUrl = button.dataset.img;
-//     window.current_product = button.dataset.product_id;
-//     popup.open(imageUrl);
-// }
-
-// openPopupButton.forEach((button) => {
-//     button.addEventListener('click', openPopup)
-// })
 
 function printProducts(){
     const products = document.querySelectorAll('.col-md-3')
@@ -139,22 +132,3 @@ function decreaseSort() {
     });
 }
 
-function loadColumns() {
-    // Получаем блок "row" из первого файла (index.html)
-    const indexRow = document.querySelector('.row');
-
-    // Получаем блок "row" из текущего файла (CategoryPage.html)
-    const categoryRow = document.querySelector('.row');
-
-    // Проверяем, что блок из первого файла существует
-    if (indexRow) {
-        // Клонируем содержимое блока "row" из первого файла
-        const clonedRow = indexRow.cloneNode(true);
-
-        // Добавляем клонированный блок в текущий файл
-        categoryRow.appendChild(clonedRow);
-    }
-}
-
-// Вызываем функцию для загрузки колонок при загрузке страницы
-loadColumns();
