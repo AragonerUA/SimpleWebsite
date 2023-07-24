@@ -16,5 +16,12 @@
         </div>
     </section>
     <script src="../index.js"></script>
+    <?php
+    require "../../../backend/open_connection.php";
+    session_start();
+    $user_id = $_SESSION["ID"];
+    $sql = "DELETE FROM `basket` WHERE id_user='$user_id'";
+    $result = mysqli_query($con, $sql);
+    ?>
 </body>
 </html>

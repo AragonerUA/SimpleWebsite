@@ -70,7 +70,24 @@ echo "<a class=\"read_more mar_top\" style=\"background-color: rgba(255,0,0,0.66
                         }
                     </script>
                     <p class="ordering__text">Available options and delivery time can be selected at checkout</p>
-                    <h3 class="ordering__total">Total: 3000$</h3>
+<!--                    --><?php
+//                    require "../../../backend/open_connection.php";
+//                    $user_id = (int) $_SESSION["ID"];
+//                    $sql = "SELECT `id_prod` FROM `basket` WHERE `id_user` = $user_id;";
+//                    $result = mysqli_query($con, $sql);
+//                    $items = mysqli_fetch_array($result, MYSQLI_ASSOC);
+//                    $summary = 0;
+////                    echo "<h3 class='ordering__total'>Total: 3000$</h3>";
+//                    echo count($items);
+//                    foreach ($items as $item) {
+//                        $new_sql = "SELECT `price` FROM `products` WHERE `id` = $item;";
+//                        $new_result = mysqli_query($con, $new_sql);
+//                        $new_item = mysqli_fetch_array($new_result, MYSQLI_ASSOC);
+//                        $summary += $new_item["price"];
+//                        echo "<h3>$summary</h3>";
+//                    }
+//                    echo "<h3>Total: $summary</h3>";
+//                    ?>
                 </div>
             </div>
         </div>

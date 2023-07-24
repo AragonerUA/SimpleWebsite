@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,35 +31,31 @@
                 </div>
             </div>
         </div>
-        <div class="row" id="columnContainer"></div>
-        <!--                <div class="col-md-3 col-sm-6">-->
-        <!--                    <div class="protien" data-img="../images/pro1.png">-->
-        <!--                        <figure><img src="../images/pro1.png" alt="#"/></figure>-->
-        <!--                        <h3>$400</h3>-->
-        <!--                        <span> Variations  </span>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--                <div class="col-md-3 col-sm-6">-->
-        <!--                    <div class="protien" data-img="../images/pro2.png">-->
-        <!--                        <figure><img src="../images/pro2.png" alt="#"/></figure>-->
-        <!--                        <h3>$401</h3>-->
-        <!--                        <span>  Passages  </span>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--                <div class="col-md-3 col-sm-6">-->
-        <!--                    <div class="protien" data-img="../images/pro3.png">-->
-        <!--                        <figure><img src="../images/pro3.png" alt="#"/></figure>-->
-        <!--                        <h3>$4010</h3>-->
-        <!--                        <span> Protein </span>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--                <div class="col-md-3 col-sm-6">-->
-        <!--                    <div class="protien" data-img="../images/pro4.png">-->
-        <!--                        <figure><img src="../images/pro4.png" alt="#"/></figure>-->
-        <!--                        <h3>$400</h3>-->
-        <!--                        <span> Pedicure </span>-->
-        <!--                    </div>-->
-        <!--                </div>-->
+        <div class="row">
+            <?php
+            require "../../../backend/open_connection.php";
+            $new_sql = "SELECT * FROM `products`";
+            $result = mysqli_query($con, $new_sql);
+            $items = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            foreach ($items as $row) {
+                $prod_row_id = $row["id"];
+                $prod_row_image = $row["image"];
+                $prod_row_price = $row["price"];
+                $prod_row_name = $row["name"];
+                $prod_row_desc = $row["description"]; ?>
+                <div class="col-md-3 col-sm-6">
+                    <?php
+                    $call = "popup.open('$prod_row_image', '$prod_row_desc', $prod_row_price, '$prod_row_name', $prod_row_id)";
+                    echo "<div class=\"protien\" data-img=\"$prod_row_image\" data-product_id=\"$prod_row_id\">";
+                    echo "<figure><img src=\"$prod_row_image\" alt=\"#\"/></figure>";
+                    echo "<h3>$$prod_row_price</h3>";
+                    echo "<span>$prod_row_name</span>";
+                    echo "<a class='read_more mar_top' onclick=\"$call\" href='Javascript:void(0)'> Buy Now</a>";
+                    echo "</div>";
+                    ?>
+                </div>
+            <?php } ?>
+        </div>
     </div>
 </div>
 <section class="popup">

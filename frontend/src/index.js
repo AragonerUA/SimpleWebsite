@@ -82,7 +82,7 @@ function openProfileFromBasket() {
 }
 
 function openCheckout() {
-    window.location = "Checkout.html"
+    window.location = "Checkout.php"
 }
 
 function openCategoryPage() {
