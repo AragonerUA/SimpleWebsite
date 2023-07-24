@@ -102,29 +102,29 @@
                </div>
             </div>
             <div class="row">
-                <?php
-                require "../../backend/open_connection.php";
-                $new_sql = "SELECT * FROM `products`";
-                $result = mysqli_query($con, $new_sql);
-                $items = mysqli_fetch_all($result, MYSQLI_ASSOC);
-                foreach ($items as $row) {
-                    $prod_row_id = $row["id"];
-                    $prod_row_image = $row["image"];
-                    $prod_row_price = $row["price"];
-                    $prod_row_name = $row["name"];
-                    $prod_row_desc = $row["description"]; ?>
+<!--                --><?php
+//                require "../../backend/open_connection.php";
+//                $new_sql = "SELECT * FROM `products`";
+//                $result = mysqli_query($con, $new_sql);
+//                $items = mysqli_fetch_all($result, MYSQLI_ASSOC);
+//                foreach ($items as $row) {
+//                    $prod_row_id = $row["id"];
+//                    $prod_row_image = $row["image"];
+//                    $prod_row_price = $row["price"];
+//                    $prod_row_name = $row["name"];
+//                    $prod_row_desc = $row["description"]; ?>
                 <div class="col-md-3 col-sm-6">
-                    <?php
-                    $call = "popup.open('$prod_row_image', '$prod_row_desc', $prod_row_price, '$prod_row_name', $prod_row_id)";
-                    echo "<div class=\"protien\" data-img=\"$prod_row_image\" data-product_id=\"$prod_row_id\">";
-                        echo "<figure><img src=\"$prod_row_image\" alt=\"#\"/></figure>";
-                        echo "<h3>$$prod_row_price</h3>";
-                        echo "<span>$prod_row_name</span>";
-                        echo "<a class='read_more mar_top' onclick=\"$call\" href='Javascript:void(0)'> Buy Now</a>";
-                    echo "</div>";
-                    ?>
+<!--                    --><?php
+//                    $call = "popup.open('$prod_row_image', '$prod_row_desc', $prod_row_price, '$prod_row_name', $prod_row_id)";
+//                    echo "<div class=\"protien\" data-img=\"$prod_row_image\" data-product_id=\"$prod_row_id\">";
+//                        echo "<figure><img src=\"$prod_row_image\" alt=\"#\"/></figure>";
+//                        echo "<h3>$$prod_row_price</h3>";
+//                        echo "<span>$prod_row_name</span>";
+//                        echo "<a class='read_more mar_top' onclick=\"$call\" href='Javascript:void(0)'> Buy Now</a>";
+//                    echo "</div>";
+//                    ?>
                 </div>
-                <?php } ?>
+<!--                --><?php //} ?>
             </div>
          </div>
       </div>
@@ -196,9 +196,9 @@
                                  <div class="carousel-caption relative2">
                                     <div class="row d_flex">
                                        <div class="col-md-11">
-                                          <i><img src="./images/costu.png" alt="#"/></i>
-                                          <span>Consectetur</span>
-                                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+                                          <i><img src="./images/free-icon-businessman-6998058.png" style="width: 70px" alt="#"/></i>
+                                          <span>Mihalevich</span>
+                                          <p>I chose this store for shopping for sports nutrition and I do not regret it. Here, an extensive range of useful products, promotions are regularly held, many discounts, convenient pickup. If there are difficulties in choosing, then I consult the sellers.</p>
                                        </div>
                                     </div>
                                  </div>
@@ -222,7 +222,7 @@
                         <ul class="conta">
                            <li><i class="fa fa-phone" aria-hidden="true"></i> Call Now  +01 123467890</li>
                            <li><i class="fa fa-map-marker" aria-hidden="true"></i> Location</li>
-                           <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> demo@gmail.com</a></li>
+                           <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> san4es.kom@gmail.com</a></li>
                         </ul>
                      </div>
                   </div>
