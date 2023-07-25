@@ -135,7 +135,7 @@
                <div class="col-md-6">
                   <div class="titlepage">
                      <h2>About Us</h2>
-                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or</p>
+                     <p>Welcome to ProProtein, your one-stop-shop for premium protein products designed to elevate your fitness journey and support a healthy, active lifestyle. Established in 2023 by a team of health and fitness enthusiasts, ProProtein is a leading company specializing in the development, manufacturing, and distribution of high-quality protein supplements and nutrition solutions.</p>
                   </div>
                </div>
                <div class="col-md-6 pad_right0">
@@ -219,9 +219,9 @@
                   <div class="row">
                      <div class="col-sm-12">
                         <ul class="conta">
-                           <li><i class="fa fa-phone" aria-hidden="true"></i> Call Now  +01 123467890</li>
-                           <li><i class="fa fa-map-marker" aria-hidden="true"></i> Location</li>
-                           <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> san4es.kom@gmail.com</a></li>
+                           <li><i class="fa fa-phone" aria-hidden="true"></i> Call Now  +357 99 732104</li>
+                           <li><i class="fa fa-map-marker" aria-hidden="true"></i> Cyprus, Paphos </li>
+                           <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> pro-protein@protein.com </a></li>
                         </ul>
                      </div>
                   </div>
@@ -233,39 +233,35 @@
                      <img class="tex_left" src="images/logo2.png" alt="#"/>
                   </div>
                   <div class=" col-md-3 col-sm-6">
-                     <p class="variat">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum </p>
+                     <p class="variat">At ProProtein, our mission is simple: to empower individuals to achieve their fitness goals and unlock their true potential through the power of protein.</p>
                   </div>
                   <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
                      <h3>Information  </h3>
                      <ul class="link_menu">
-                        <li> There are many </li>
-                        <li> variations of pas</li>
-                        <li> sages of Lorem </li>
-                        <li> Ipsum available, </li>
-                        <li>but the majority </li>
-                        <li>have suffered  </li>
+                        <li> Please contact us </li>
+                        <li> if you have any </li>
+                        <li> problems or questions </li>
+                        <li> or you want to</li>
+                        <li> join our team </li>
                      </ul>
                   </div>
                   <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
                      <h3>Helpful Links</h3>
                      <ul class="link_menu">
-                        <li> There are many </li>
-                        <li> variations of pas</li>
-                        <li> sages of Lorem </li>
-                        <li> Ipsum available, </li>
-                        <li>but the majority </li>
-                        <li>have suffered  </li>
+                        <li> Write us! </li>
+                        <li> Call us! </li>
+                        <li> Contact us </li>
+                        <li> in any way! </li>
                      </ul>
                   </div>
                   <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
                      <h3>Supported</h3>
                      <ul class="link_menu">
-                        <li> There are many </li>
-                        <li> variations of pas</li>
-                        <li> sages of Lorem </li>
-                        <li> Ipsum available, </li>
-                        <li>but the majority </li>
-                        <li>have suffered  </li>
+                        <li> By Ronnie Coleman </li>
+                        <li> By Arnold Schwarzenegger </li>
+                        <li> By Sylvester Stallone </li>
+                        <li> By Jay Cutler </li>
+                        <li> By Phil Heath </li>
                      </ul>
                   </div>
                   <div class="col-sm-12" style="padding-bottom: 30px">
